@@ -18,7 +18,7 @@ Here are some places we should keep in mind when credential hunting:
 
 ### Manual
 
-You should check the [Commands Cheatsheet for Windows File System](/commands-cheatsheet/windows#file-system).
+You should check the [Commands Cheatsheet for Windows File System](/commands-cheatsheet/windows/batch-and-powershell#file-system).
 
 ### LaZagne
 
