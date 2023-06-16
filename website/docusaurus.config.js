@@ -62,7 +62,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/vitorfhc/pwn-cpts',
+            href: 'https://github.com/vitorfhc/hkb',
             label: 'GitHub',
             position: 'right',
           },
