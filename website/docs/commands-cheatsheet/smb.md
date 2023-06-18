@@ -1,5 +1,11 @@
 # SMB
 
+:::tip Null Sessions
+
+Do not forget to leverage null sessions to enumerate users, groups, shares, etc.
+
+:::
+
 ## SMBClient
 
 ### Downloading files
@@ -49,6 +55,12 @@ crackmapexec smb <ip> -u <username> -p <password> --users
 
 ```bash
 crackmapexec smb <ip> -u <username> -p <password> --groups
+```
+
+### Enumerating password policy
+
+```bash
+crackmapexec smb <ip> -u <user> -p <password> --pass-pol
 ```
 
 ### Dumping SAM hashes

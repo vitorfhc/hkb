@@ -1,5 +1,25 @@
 # Batch and Powershell
 
+## Active Directory
+
+### Load the built-in Active Directory PowerShell module
+
+```powershell title="PowerShell"
+Import-Module ActiveDirectory
+```
+
+### List domain users using Get-ADUser and filter by the username
+
+```powershell title="PowerShell"
+Get-ADUser -Filter * | select Name
+```
+
+### Check the description field of domain users for sensitive data such as passwords
+
+```powershell title="PowerShell"
+Get-DomainUser * | Select-Object samaccountname,description
+```
+
 ## Applications, processes, and services
 
 ### Show running processes

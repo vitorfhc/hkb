@@ -27,3 +27,9 @@ You can see how to get the `unshadow` tool output on [this page](/local-password
 ```bash
 hashcat -m 1800 unshadow.txt /usr/share/wordlists/rockyou.txt
 ```
+
+### Crack an NTLMv2 hash gathered with Responder
+
+```bash
+hashcat -m 5600 <hash> <wordlist>
+```
