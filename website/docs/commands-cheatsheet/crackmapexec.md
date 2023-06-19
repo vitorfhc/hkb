@@ -1,31 +1,6 @@
-# SMB
+# CrackMapExec
 
-:::tip Null Sessions
-
-Do not forget to leverage null sessions to enumerate users, groups, shares, etc.
-
-:::
-
-## SMBClient
-
-### Downloading files
-
-Connect using the command below:
-
-```bash
-smbclient //<ip>/<share>
-```
-
-In interactive mode:
-
-```bash
-smb: \> mask ""
-smb: \> recurse
-smb: \> prompt
-smb: \> mget *
-```
-
-## CrackMapExec
+## SMB
 
 ### Connecting using a null session
 
@@ -80,21 +55,3 @@ crackmapexec smb <ip> -u <username> -p <password> --ntds
 ```bash
 crackmapexec smb <ip> -u <username> -p <password> --lsa
 ```
-
-## Impacket
-
-### Launch an SMB server
-
-```bash
-impacket-smbserver -smb2support <share name> <share path>
-```
-
-:::tip Moving files to the target machine
-
-You can use the `cmd.exe`to move files to the target machine.
-
-```batch
-move <file> \\<ip>\<share>
-```
-
-:::
