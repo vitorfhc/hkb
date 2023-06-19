@@ -12,6 +12,10 @@ Several tools can be used for this attack:
 - [Invoke-TheHash](https://github.com/Kevin-Robertson/Invoke-TheHash)
 - [evil-winrm](https://github.com/Hackplayers/evil-winrm)
 
+## External Resources
+
+- [Pass the Hash by Hackndo](https://en.hackndo.com/pass-the-hash/)
+- [Pass the Hash by HackTricks](https://book.hacktricks.xyz/windows-hardening/ntlm#pass-the-hash)
 
 ## Examples
 
