@@ -4,6 +4,18 @@
 
 ### Load the built-in Active Directory PowerShell module
 
+Use one of the following commands to install the Active Directory module ([source](https://stackoverflow.com/questions/19182497/import-module-the-specified-module-activedirectory-was-not-loaded-because-no)):
+
+```powershell
+Add-WindowsFeature RSAT-AD-PowerShell
+```
+
+```powershell
+Enable-WindowsOptionalFeature -FeatureName ActiveDirectory-Powershell -Online -All
+```
+
+Then, load the module:
+
 ```powershell title="PowerShell"
 Import-Module ActiveDirectory
 ```
