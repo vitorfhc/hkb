@@ -2,10 +2,6 @@
 
 In this attack, we use a stolen Kerberos ticket to move laterally instead of an NTLM password hash.
 
-## External Resources
-
-- [HackTheBox Academy](https://academy.hackthebox.com/module/147/section/1639)
-
 ## Examples
 
 ### Inject a Kerberos ticket into the current session
@@ -36,3 +32,6 @@ Enter-PSSession -ComputerName DC01.inlanefreight.htb
 
 :::
 
+## External Resources
+
+- [HackTheBox Academy](https://academy.hackthebox.com/module/147/section/1639)

