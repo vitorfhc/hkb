@@ -67,6 +67,68 @@ net localgroup
 
 ## File System
 
+Absolutely, here are some common PowerShell and Batch commands. 
+
+### Display List of Files and Directories
+
+```batch title="Using dir"
+dir
+```
+
+```powershell title="Using Get-ChildItem"
+Get-ChildItem
+```
+
+### Changing Directory
+
+```batch title="Using cd"
+cd \path\to\directory
+```
+
+```powershell title="Using Set-Location"
+Set-Location -Path \path\to\directory
+```
+
+### Creating a New Directory
+
+```batch title="Using mkdir"
+mkdir new_directory
+```
+
+```powershell title="Using New-Item"
+New-Item -ItemType Directory -Path .\new_directory
+```
+
+### Deleting a File
+
+```batch title="Using del"
+del filename
+```
+
+```powershell title="Using Remove-Item"
+Remove-Item -Path filename
+```
+
+### Copying Files
+
+```batch title="Using copy"
+copy source destination
+```
+
+```powershell title="Using Copy-Item"
+Copy-Item -Path source -Destination destination
+```
+
+### Displaying Content of a File
+
+```batch title="Using type"
+type filename
+```
+
+```powershell title="Using Get-Content"
+Get-Content -Path filename
+```
+
 ### Find files by content
 
 ```batch title="Search for 'password' using findstr"
@@ -85,3 +147,23 @@ findstr /sim /c:"password" *.txt *.ini *.cfg *.config *.xml *.git *.ps1 *.yml
 **External resources:**
 
 - [`findstr` Docs](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr)
+
+### Mount SMB share
+
+```batch title="Using net use"
+net use Z: \\server\share /user:username password
+```
+
+```powershell title="Using New-PSDrive"
+New-PSDrive -Name Z -PSProvider FileSystem -Root \\server\share -Credential username
+```
+
+### Move file to unmounted SMB share
+
+```batch title="Using copy"
+copy file.txt \\server\share
+```
+
+```powershell title="Using Copy-Item"
+Copy-Item -Path file.txt -Destination \\server\share
+```
