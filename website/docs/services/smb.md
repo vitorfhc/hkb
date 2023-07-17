@@ -46,6 +46,24 @@ smb-system-info
 smb-enum-shares
 ```
 
+## Null Sessions
+
+The SMB null session is a type of anonymous, non-authenticated connection that can be established with a server. It provides an avenue to query system details such as shared resources, user accounts, and system configurations without the need for credentials. It can be exploited by malicious actors who can gather sensitive information about the system, potentially facilitating unauthorized access, data breaches, or other cyberattacks.
+
+You can use CrackMapExec to try for this type of connection.
+
+```bash
+crackmapexec smb <ip> -u '' -p '' --shares
+```
+
+:::caution
+
+There's a difference between using `-u ''` and `-u ' '`. It seems related to guest sessions.
+
+**Make sure to test both.**
+
+:::
+
 ## Resources
 
 ### Internal

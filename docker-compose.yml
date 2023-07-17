@@ -10,4 +10,4 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./website:/app/
+      - ./website/docs:/app/website/docs

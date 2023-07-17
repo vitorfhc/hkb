@@ -5,4 +5,4 @@ pagination_next: null
 
 # Homepage
 
-Welcome to my personal hacking knowledge base.
+Welcome to my busfactor's hacking knowledge base.
