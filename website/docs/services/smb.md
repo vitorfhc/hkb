@@ -64,6 +64,23 @@ There's a difference between using `-u ''` and `-u ' '`. It seems related to gue
 
 :::
 
+## RCE
+
+You can achieve RCE using several tools and methods:
+
+- Impacket PsExec - Python PsExec like functionality example using RemComSvc.
+- Impacket SMBExec - A similar approach to PsExec without using RemComSvc. The technique is described here. This implementation goes one step further, instantiating a local SMB server to receive the output of the commands. This is useful when the target machine does NOT have a writeable share available.
+- Impacket atexec - This example executes a command on the target machine through the Task Scheduler service and returns the output of the executed command.
+- CrackMapExec - includes an implementation of smbexec and atexec.
+- Metasploit PsExec - Ruby PsExec implementation.
+- SMBClient
+
+:::tip
+
+You may want to try several tools if one doesn't work. Also, make sure to change the `--exec-method` for CrackMapExec.
+
+:::
+
 ## Resources
 
 ### Internal
