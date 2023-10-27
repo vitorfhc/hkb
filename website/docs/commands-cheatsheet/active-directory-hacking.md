@@ -66,7 +66,7 @@ hashcat -m 5600 <hash> <wordlist>
 
 ## CrackMapExec
 
-**Also found in:** [SMB Cheatsheet](/commands-cheatsheet/smb)
+**Also found in:** [SMB Cheatsheet](/commands-cheatsheet/crackmapexec)
 
 ### Enumerate the domain password policy
 

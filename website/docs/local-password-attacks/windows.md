@@ -44,7 +44,7 @@ The output format is `username:RID:LMHASH:NTHASH`.
 
 ### Cracking the Hashes
 
-Navigate to the [SMB Commands Cheatsheet](/commands-cheatsheet/smb#brute-forcing-credentials).
+Navigate to the [CrackMapExec Commands Cheatsheet](/commands-cheatsheet/crackmapexec#brute-forcing-credentials).
 
 ## LSASS
 

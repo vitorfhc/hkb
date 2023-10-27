@@ -85,7 +85,7 @@ You may want to try several tools if one doesn't work. Also, make sure to change
 
 ### Internal
 
-- [SMB Cheatsheet](/commands-cheatsheet/smb)
+- [SMB Cheatsheet](/commands-cheatsheet/crackmapexec)
 
 ### External
 

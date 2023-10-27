@@ -7,19 +7,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Hacking Knowledge Base',
-  tagline: 'Vitor Falcao hacking knowledge base',
+  tagline: 'Busfactor\'s hacking knowledge base',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://hkb.vitorfalcao.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hkb/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'vitorfhc', // Usually your GitHub org/user name.
   projectName: 'hkb', // Usually your repo name.
+  deploymentBranch: 'gh-pages', // The branch of your docs repo that you are publishing to GitHub pages
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -58,7 +59,7 @@ const config = {
         title: 'HKB',
         logo: {
           alt: 'HKB Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -80,7 +81,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/egl_falcao',
+                href: 'https://twitter.com/busf4ctor',
               },
               {
                 label: 'GitHub',
@@ -89,7 +90,7 @@ const config = {
             ],
           }
         ],
-        copyright: `Built by Vitor Falcao using Docusaurus.`,
+        copyright: `Built by Vitor Falcao (aka busfactor) using Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
