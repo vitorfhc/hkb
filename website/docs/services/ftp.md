@@ -36,8 +36,4 @@ Modern FTP servers include protections that, by default, prevent this type of at
 
 ## Resources
 
-### Internal
-
-### External
-
 - [HackTricks Book](https://book.hacktricks.xyz/network-services-pentesting/pentesting-ftp)

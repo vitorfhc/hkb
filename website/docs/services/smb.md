@@ -83,10 +83,4 @@ You may want to try several tools if one doesn't work. Also, make sure to change
 
 ## Resources
 
-### Internal
-
-- [SMB Cheatsheet](/commands-cheatsheet/crackmapexec)
-
-### External
-
 - [HackTricks Book](https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb)

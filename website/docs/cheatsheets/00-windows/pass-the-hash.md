@@ -1,9 +1,5 @@
 # Pass the Hash
 
-Follow [this link](/lateral-movement/windows/pass-the-hash) to access the Pass the Hash section.
-
-You can steal the hashes by following the [Dumping Credentials](/commands-cheatsheet/windows/dumping-credentials) section.
-
 ## Mimikatz
 
 ```batch

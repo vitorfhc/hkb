@@ -85,7 +85,7 @@ find / -uid 0 -perm -u=s -type f 2>/dev/null
 
 ### Find files by content
 
-```bash title="Find everyfile which contains the word 'password'"
+```bash title="Find every file which contains the word 'password'"
 grep -irn / -e password 2>/dev/null
 ```
 
@@ -119,6 +119,12 @@ tar -czvf archive.tar <file>
 ```bash title="Extract a .tar archive"
 tar -xzvf archive.tar
 ```
+
+:::tip Extract to another directory
+
+You can use the command `tar -xf archite.tar -C target/` to extract all files to the `target/` directory.
+
+:::
 
 :::info Command explanation
 

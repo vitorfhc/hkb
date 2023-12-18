@@ -42,10 +42,6 @@ The output format is `username:RID:LMHASH:NTHASH`.
 
 :::
 
-### Cracking the Hashes
-
-Navigate to the [CrackMapExec Commands Cheatsheet](/commands-cheatsheet/crackmapexec#brute-forcing-credentials).
-
 ## LSASS
 
 LSASS (Local Security Authority Subsystem Service) in Windows is a process responsible for enforcing security policies, managing user authentication, and auditing system events.

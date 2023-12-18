@@ -16,8 +16,6 @@ Here are some places we should keep in mind when credential hunting:
 
 ### Manual File System
 
-You should check the [Commands Cheatsheet for Linux File System](/commands-cheatsheet/linux/bash#file-system).
-
 ```bash title="Example: search for 'password' using grep"
 grep -irn / -e password 2>/dev/null
 ```

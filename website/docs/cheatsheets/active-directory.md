@@ -1,14 +1,6 @@
-# Active Directory Hacking
-
-:::info Credits to Hack the Box
-
-A lot of the commands in this cheatsheet are taken from a [Hack the Box blog post](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide).
-
-:::
+# Active Directory
 
 ## Powershell
-
-**Also found in:** [Batch and Powershell Cheatsheet](/commands-cheatsheet/windows/batch-and-powershell)
 
 ### Load the built-in Active Directory PowerShell module
 
@@ -56,8 +48,6 @@ kerbrute passwordspray -d <domain> --dc <ip> valid_users.txt <password>
 
 ## Hashcat
 
-**Also found in:** [Hashcat Cheatsheet](/commands-cheatsheet/hashcat)
-
 ### Crack an NTLMv2 hash gathered with Responder
 
 ```bash
@@ -65,8 +55,6 @@ hashcat -m 5600 <hash> <wordlist>
 ```
 
 ## CrackMapExec
-
-**Also found in:** [SMB Cheatsheet](/commands-cheatsheet/crackmapexec)
 
 ### Enumerate the domain password policy
 
